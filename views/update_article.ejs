@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+    <!-- Add Article Form -->
+    <div class="container">
+        <h1>Update Article</h1>
+        <% post.forEach((i)=>{ %>
+        <form method="POST" action="/admin/update/<%=i.title%>">
+            <div class="form-group">
+              <label for="title">Article Title : </label>
+              <input type="text" class="form-control" id="title" name="title" value="<%=i.title%>">
+            </div>
+            <div class="form-group">
+                <label for="author">Article Author : </label>
+                <input type="text" class="form-control" id="author" name="author" value="<%=i.author%>">
+            </div>
+            <div>
+                <label for="body">Article Body : </label>
+                <textarea name="body" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"><%=i.body%></textarea>  
+            </div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <% }) %>
+    </div>
+<%- include('partials/footer') %>

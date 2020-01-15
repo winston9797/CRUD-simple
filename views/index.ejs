@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+    <!-- Artilces List -->
+    <div class="container">
+        <ul class="list-group">
+            <% post.forEach((i)=>{ %>
+            <li class="list-group-item">
+                <a href="#"><%=i.title%></a> 
+                <a href="admin/update/<%=i.title%>" class="btn btn-primary float-right ml-2">Update</a>
+                <a href="admin/delete/<%=i.title%>" class="btn btn-danger float-right">Delete</a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+<%- include('partials/footer') %>
+
+
+    

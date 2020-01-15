@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+    <!-- Add Article Form -->
+    <div class="container">
+        <h1>Add Article</h1>
+        <form method="POST" action="/admin/add">
+            <div class="form-group">
+              <label for="title">Article Title : </label>
+              <input type="text" class="form-control" id="title" name="title" >
+            </div>
+            <div class="form-group">
+                <label for="author">Article Author : </label>
+                <input type="text" class="form-control" id="author" name="author" >
+            </div>
+            <div>
+                <label for="body">Article Body : </label>
+                <textarea name="body" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>  
+            </div><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+<%- include('partials/footer') %>
